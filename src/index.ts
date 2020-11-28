@@ -27,10 +27,10 @@ const main = async () => {
         console.log('Server started on localhost:4000')
     })
     //access to all post fields, second one does not 
-   const post = orm.em.create(Post, {title:'my first post'})
- await orm.em.persistAndFlush(post);
-  const posts = await orm.em.find(Post, {});
-  console.log(posts);
+    //  const post = orm.em.create(Post, {title:'my first post'})
+    //await orm.em.persistAndFlush(post);
+    const posts = await orm.em.find(Post, {});
+    console.log(posts);
 }
 
 main().catch((err) => {
